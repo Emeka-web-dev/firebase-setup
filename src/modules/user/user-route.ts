@@ -4,7 +4,7 @@ import { createUser, getUser } from "./user-controller";
 
 const userRouter: Router = Router();
 
-userRouter.post("/users", validateFirebaseToken, createUser);
+userRouter.post("/users", createUser);
 userRouter.get("/user/:id", validateFirebaseToken, getUser);
 
 export default userRouter;
